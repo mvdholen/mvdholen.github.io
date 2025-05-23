@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f7f9fb;
+    color: #222;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.8em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.3em;
+    color: #b0b0b0;
+}
+
+nav {
+    background: #fff;
+    box-shadow: 0 2px 8px #0001;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 18px;
+    padding: 18px 0;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #0078d7;
+}
+
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    color: #0078d7;
+    margin-bottom: 18px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 24px;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: #0078d7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    padding: 30px 0 18px 0;
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 40px 0 24px 0;
+    }
+
+    section {
+        margin: 36px auto;
+    }
+}
