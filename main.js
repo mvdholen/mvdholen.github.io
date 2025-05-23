@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Markdown readview logic
 const markdownView = document.getElementById('markdown-view');
 const markdownContent = document.getElementById('markdown-content');
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.classList.contains('md-link')) {
         e.preventDefault();
         const mdFile = e.target.getAttribute('data-md');
@@ -51,11 +51,11 @@ document.addEventListener('click', function(e) {
             .then(md => {
                 markdownContent.innerHTML = marked.parse(md);
                 markdownView.style.display = 'block';
-                window.scrollTo({top: markdownView.offsetTop - 30, behavior: 'smooth'});
+                window.scrollTo({ top: markdownView.offsetTop - 30, behavior: 'smooth' });
             });
     }
 });
-document.getElementById('close-markdown').onclick = function() {
+document.getElementById('close-markdown').onclick = function () {
     markdownView.style.display = 'none';
     markdownContent.innerHTML = '';
 };
