@@ -9,12 +9,13 @@
     <meta name="description" content="Martijn van D H's personal GitHub homepage. Projects, contact, and more.">
     <link rel="stylesheet" href="styles.css">
     <!-- CSS moved to styles.css -->
+    <script src="main.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Martijn van D H</h1>
-        <p>Software Engineer | Open Source Enthusiast</p>
+        <h1 id="name"></h1>
+        <p id="subtitle"></p>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -23,42 +24,20 @@
     </nav>
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hi! I'm Martijn, a passionate software engineer who loves building open source projects and sharing
-            knowledge. I enjoy working with web technologies, automation, and creative coding. Welcome to my GitHub
-            homepage!
-        </p>
+        <p id="about-text"></p>
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of your first featured project. <br><a
-                        href="https://github.com/mvdholen/project-one" target="_blank">View on GitHub</a></p>
-            </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A brief description of your second project. <br><a href="https://github.com/mvdholen/project-two"
-                        target="_blank">View on GitHub</a></p>
-            </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>A brief description of your third project. <br><a href="https://github.com/mvdholen/project-three"
-                        target="_blank">View on GitHub</a></p>
-            </div>
-        </div>
+        <div class="projects" id="projects-list"></div>
     </section>
     <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>
-            You can reach me via <a href="mailto:your.email@example.com">email</a> or find me on <a
-                href="https://github.com/mvdholen" target="_blank">GitHub</a>.
+            You can reach me via <a id="contact-email"></a> or find me on <a id="contact-github" target="_blank">GitHub</a>.
         </p>
     </section>
     <footer>
-        &copy; 2025 Martijn van D H &mdash; <a href="https://github.com/mvdholen" target="_blank"
-            style="color:#888;">GitHub</a>
+        &copy; <span id="footer-copyright"></span> <span id="footer-name"></span> &mdash; <a id="footer-github" href="#" target="_blank" style="color:#888;"></a>
     </footer>
 </body>
 

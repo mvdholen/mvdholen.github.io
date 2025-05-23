@@ -1,0 +1,32 @@
+{
+    "name": "Marijn Vandenholen",
+    "subtitle": "Architect(constuction) | Coding Source Enthusiast",
+    "about": "Hi! I'm Marijn, a passionate software engineer who loves building open source projects and sharing knowledge. I enjoy working with web technologies, automation, and creative coding. Welcome to my GitHub homepage!",
+    "projects": [
+        {
+            "title": "Project One",
+            "description": "A brief description of your first featured project.",
+            "url": "https://github.com/mvdholen/project-one"
+        },
+        {
+            "title": "Project Two",
+            "description": "A brief description of your second project.",
+            "url": "https://github.com/mvdholen/project-two"
+        },
+        {
+            "title": "Project Three",
+            "description": "A brief description of your third project.",
+            "url": "https://github.com/mvdholen/project-three"
+        }
+    ],
+    "contact": {
+        "email": "mvdholen@proton.me",
+        "github": "https://github.com/mvdholen"
+    },
+    "footer": {
+        "copyright": "2025",
+        "text": "Marijn Vandenholen",
+        "githubLabel": "GitHub",
+        "githubUrl": "https://github.com/mvdholen"
+    }
+}
