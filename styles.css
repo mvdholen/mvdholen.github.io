@@ -188,25 +188,26 @@ footer {
 }
 
 .nav-btn {
-    background: #e53935;
-    color: #fff;
+    background: none;
+    color: #e53935;
     border: none;
-    border-radius: 6px;
-    padding: 10px 22px;
-    margin: 10px 8px 10px 8px;
+    border-radius: 0;
+    padding: 0 18px;
+    margin: 0 8px;
     font-size: 1em;
     font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: 0 2px 8px #0002;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+    transition: color 0.2s, border-bottom 0.2s;
 }
 
 .nav-btn:hover,
 .nav-btn:focus {
-    background: #b71c1c;
-    color: #fff;
-    box-shadow: 0 4px 16px #0003;
+    color: #b71c1c;
+    background: none;
+    box-shadow: none;
+    border-bottom: 2px solid #b71c1c;
 }
 
 .hamburger {
