@@ -10,48 +10,75 @@ header {
     color: #fff;
     padding: 60px 0 40px 0;
     text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18), 0 1.5px 0 #333;
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
     margin: 0 0 10px 0;
     font-size: 2.8em;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(229,57,53,0.12), 0 1px 0 #fff;
 }
 
 header p {
     margin: 0;
     font-size: 1.3em;
-    color: #b0b0b0;
+    color: #ffb3b3;
+    text-shadow: 0 1px 4px rgba(229,57,53,0.10);
 }
 
 nav {
     background: #fff;
-    box-shadow: 0 2px 8px #0001;
+    box-shadow: 0 2px 12px #0002, 0 1.5px 0 #333;
     text-align: center;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
     display: inline-block;
     margin: 0 18px;
     padding: 18px 0;
-    color: #222;
+    color: #e53935;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
 }
 
 nav a:hover {
-    color: #0078d7;
+    color: #b71c1c;
+    border-bottom: 2px solid #b71c1c;
+    background: #fff5f5;
+    border-radius: 4px 4px 0 0;
 }
 
 section {
     max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.08), 0 1.5px 0 #333;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
 }
 
 section h2 {
-    color: #0078d7;
+    color: #e53935;
     margin-bottom: 18px;
+    text-shadow: 0 1px 4px rgba(229,57,53,0.10);
 }
 
 .projects {
@@ -62,18 +89,36 @@ section h2 {
 
 .project-card {
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #0001;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 0 #333;
     padding: 24px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1.5px solid #eee;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-card:hover {
     transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22), 0 2px 0 #333;
+    background: #fff6f6;
 }
 
 .project-card h3 {
     margin-top: 0;
+    color: #b71c1c;
+    text-shadow: 0 1px 4px rgba(229,57,53,0.10);
+}
+
+.project-card a {
+    color: #e53935;
+    font-weight: 500;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+}
+.project-card a:hover {
+    color: #b71c1c;
+    text-decoration: underline solid;
 }
 
 .contact {
@@ -81,27 +126,37 @@ section h2 {
 }
 
 .contact a {
-    color: #0078d7;
+    color: #e53935;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    border-bottom: 1.5px dotted #e53935;
+    transition: color 0.2s, border-bottom 0.2s;
 }
 
 .contact a:hover {
-    text-decoration: underline;
+    color: #b71c1c;
+    border-bottom: 1.5px solid #b71c1c;
 }
 
 footer {
     text-align: center;
-    color: #888;
+    color: #e53935;
     padding: 30px 0 18px 0;
     font-size: 1em;
+    background: #fff5f5;
+    box-shadow: 0 -2px 12px #0002;
+    border-top: 2px solid #333;
+    letter-spacing: 1px;
+}
+
+#footer-github {
+    color: #e53935 !important;
 }
 
 @media (max-width: 600px) {
     header {
         padding: 40px 0 24px 0;
     }
-
     section {
         margin: 36px auto;
     }

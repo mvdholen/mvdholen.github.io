@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Projects
             const projectsDiv = document.getElementById('projects-list');
             projectsDiv.innerHTML = '';
-            data.projects.forEach(project => {
+            data.projects.forEach((project, idx) => {
                 const card = document.createElement('div');
                 card.className = 'project-card';
                 let desc = project.description;
                 if (project.md) {
-                    desc += `<br><a href='${project.md}' target='_blank'>Read more</a>`;
+                    desc += `<br><a href="#" class="md-link" data-md="${project.md}">Read more</a>`;
                 }
                 card.innerHTML = `<h3>${project.title}</h3><p>${desc}<br><a href="${project.url}" target="_blank">View on GitHub</a></p>`;
                 projectsDiv.appendChild(card);
@@ -38,3 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('footer-copyright').textContent = footer.copyright;
         });
 });
+
+// Markdown readview logic
+const markdownView = document.getElementById('markdown-view');
+const markdownContent = document.getElementById('markdown-content');
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('md-link')) {
+        e.preventDefault();
+        const mdFile = e.target.getAttribute('data-md');
+        fetch(mdFile)
+            .then(res => res.text())
+            .then(md => {
+                markdownContent.innerHTML = marked.parse(md);
+                markdownView.style.display = 'block';
+                window.scrollTo({top: markdownView.offsetTop - 30, behavior: 'smooth'});
+            });
+    }
+});
+document.getElementById('close-markdown').onclick = function() {
+    markdownView.style.display = 'none';
+    markdownContent.innerHTML = '';
+};

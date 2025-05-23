@@ -9,6 +9,7 @@
     <meta name="description" content="Martijn van D H's personal GitHub homepage. Projects, contact, and more.">
     <link rel="stylesheet" href="styles.css">
     <!-- CSS moved to styles.css -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="main.js" defer></script>
 </head>
 
@@ -36,6 +37,14 @@
             You can reach me via <a id="contact-email"></a> or find me on <a id="contact-github"
                 target="_blank">GitHub</a>.
         </p>
+    </section>
+    <section id="markdown-view"
+        style="display:none; max-width:900px; margin:60px auto; padding:32px 20px; background:#fff; border-radius:18px; box-shadow:0 4px 32px 0 rgba(229,57,53,0.18); position:relative; z-index:100;">
+        <button id="close-markdown"
+            style="position:absolute;top:18px;right:18px;background:#e53935;color:#fff;border:none;border-radius:4px;padding:6px 14px;font-size:1em;cursor:pointer;box-shadow:0 2px 8px #e5393533;">
+            Close
+        </button>
+        <div id="markdown-content"></div>
     </section>
     <footer>
         &copy; <span id="footer-copyright"></span> <span id="footer-name"></span> &mdash; <a id="footer-github" href="#"
