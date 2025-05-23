@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
       data.projects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
-        card.innerHTML = `<h3>${project.title}</h3><p>${project.description}<br><a href="${project.url}" target="_blank">View on GitHub</a></p>`;
+        let desc = project.description;
+        if (project.md) {
+            desc += `<br><a href='${project.md}' target='_blank'>Read more</a>`;
+        }
+        card.innerHTML = `<h3>${project.title}</h3><p>${desc}<br><a href="${project.url}" target="_blank">View on GitHub</a></p>`;
         projectsDiv.appendChild(card);
       });
       // Contact

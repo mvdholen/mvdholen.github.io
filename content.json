@@ -6,7 +6,8 @@
         {
             "title": "Project One",
             "description": "A brief description of your first featured project.",
-            "url": "https://github.com/mvdholen/project-one"
+            "url": "https://github.com/mvdholen/project-one",
+            "md": "example.md"
         },
         {
             "title": "Project Two",
