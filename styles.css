@@ -30,7 +30,8 @@ header p {
 }
 
 nav {
-    background: #fff;
+    background: #222;
+    color: #fff;
     box-shadow: 0 2px 12px #0002, 0 1.5px 0 #333;
     text-align: center;
     border-bottom: 2px solid #333;
