@@ -25,11 +25,14 @@
             <span></span>
         </button>
         <div class="nav-links" id="nav-links">
-            <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'}); closeNav()">About
+            <button class="nav-btn"
+                onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'}); closeNav()">About
             </button>
-            <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'}); closeNav()">
+            <button class="nav-btn"
+                onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'}); closeNav()">
                 Projects</button>
-            <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeNav()">
+            <button class="nav-btn"
+                onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeNav()">
                 Contact</button>
         </div>
     </nav>
@@ -61,18 +64,18 @@
             target="_blank" style="color:#888;"></a>
     </footer>
     <script>
-    function closeNav() {
-        document.getElementById('nav-links').classList.remove('open');
-        document.getElementById('hamburger-menu').classList.remove('open');
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        var hamburger = document.getElementById('hamburger-menu');
-        var navLinks = document.getElementById('nav-links');
-        hamburger.onclick = function() {
-            hamburger.classList.toggle('open');
-            navLinks.classList.toggle('open');
-        };
-    });
+        function closeNav() {
+            document.getElementById('nav-links').classList.remove('open');
+            document.getElementById('hamburger-menu').classList.remove('open');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.getElementById('hamburger-menu');
+            var navLinks = document.getElementById('nav-links');
+            hamburger.onclick = function () {
+                hamburger.classList.toggle('open');
+                navLinks.classList.toggle('open');
+            };
+        });
     </script>
 </body>
 
