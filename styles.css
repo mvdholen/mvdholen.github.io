@@ -31,7 +31,6 @@ header p {
 
 nav {
     background: #fff;
-    box-shadow: 0 2px 12px #0002, 0 1.5px 0 #333;
     text-align: center;
     border-bottom: 2px solid #333;
     position: sticky;
@@ -153,7 +152,6 @@ footer {
     padding: 30px 0 18px 0;
     font-size: 1em;
     background: #fff5f5;
-    box-shadow: 0 -2px 12px #0002;
     border-top: 2px solid #333;
     letter-spacing: 1px;
 }
@@ -176,7 +174,10 @@ footer {
 }
 
 #projects {
-    margin-bottom: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 #projects .projects {
@@ -185,6 +186,13 @@ footer {
 
 #projects .project-card:last-child {
     margin-bottom: 32px;
+}
+
+#contact {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .nav-btn {
@@ -207,4 +215,13 @@ footer {
     background: #b71c1c;
     color: #fff;
     box-shadow: 0 4px 16px #0003;
+}
+
+/* Remove border and shadow from navbar and footer */
+nav,
+.navbar,
+footer,
+.footer {
+    border: none !important;
+    box-shadow: none !important;
 }
