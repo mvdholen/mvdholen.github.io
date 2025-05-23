@@ -19,12 +19,19 @@
         <p id="subtitle"></p>
     </header>
     <nav>
-        <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About
+        <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
-            Projects</button>
-        <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-            Contact</button>
+        <div class="nav-links" id="nav-links">
+            <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'}); closeNav()">About
+            </button>
+            <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'}); closeNav()">
+                Projects</button>
+            <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeNav()">
+                Contact</button>
+        </div>
     </nav>
     <section id="about">
         <h2>About Me</h2>
@@ -53,6 +60,20 @@
         &copy; <span id="footer-copyright"></span> <span id="footer-name"></span> &mdash; <a id="footer-github" href="#"
             target="_blank" style="color:#888;"></a>
     </footer>
+    <script>
+    function closeNav() {
+        document.getElementById('nav-links').classList.remove('open');
+        document.getElementById('hamburger-menu').classList.remove('open');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        var hamburger = document.getElementById('hamburger-menu');
+        var navLinks = document.getElementById('nav-links');
+        hamburger.onclick = function() {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        };
+    });
+    </script>
 </body>
 
 </html>

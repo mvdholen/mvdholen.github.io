@@ -37,6 +37,9 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a {
@@ -92,6 +95,7 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
+    margin-bottom: 32px;
 }
 
 .project-card {
@@ -103,7 +107,6 @@ section h2 {
     border: 1.5px solid #eee;
     position: relative;
     overflow: hidden;
-    margin-bottom: 28px;
 }
 
 .project-card:hover {
@@ -179,14 +182,6 @@ footer {
     margin-bottom: 60px;
 }
 
-#projects .projects {
-    margin-bottom: 32px;
-}
-
-#projects .project-card:last-child {
-    margin-bottom: 32px;
-}
-
 .nav-btn {
     background: #e53935;
     color: #fff;
@@ -207,4 +202,90 @@ footer {
     background: #b71c1c;
     color: #fff;
     box-shadow: 0 4px 16px #0003;
+}
+
+.hamburger {
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 18px 14px;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    border-radius: 0 0 12px 0;
+    box-shadow: 0 2px 8px #0002;
+    transition: 0.3s;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 5px 0;
+    background: #e53935;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 8px 32px #0002;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    border-radius: 0 0 12px 12px;
+    padding-bottom: 12px;
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+@media (min-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: none;
+        position: static;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        margin: 0 8px;
+    }
 }
