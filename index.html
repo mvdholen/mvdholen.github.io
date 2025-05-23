@@ -19,9 +19,12 @@
         <p id="subtitle"></p>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About
+        </button>
+        <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+            Projects</button>
+        <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            Contact</button>
     </nav>
     <section id="about">
         <h2>About Me</h2>
