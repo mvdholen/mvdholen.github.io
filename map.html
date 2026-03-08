@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Map Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <style>
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map {
+           width: calc(100vw - 80px);
+           height: calc(100vh - 80px);
+           margin: 40px;
+           box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>this site is under construction</div>
+    <div>in progress by mkhp</div>
+
+    <div id="map"></div>
+    
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script>
+                var map = L.map('map').setView([51.13676627042964, 3.752904788887263], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+                L.marker([51.18683437317017, 3.8351426070858436]).addTo(map).bindTooltip('name=\'Walderdonk\', latitude=51.18683437317017, longitude=3.8351426070858436');
+L.marker([51.18747713381796, 3.8326519915916344]).addTo(map).bindTooltip('name=\'O4\', latitude=51.18747713381796, longitude=3.8326519915916344');
+L.marker([51.17976304645496, 3.83343646255615]).addTo(map).bindTooltip('name=\'O4b\', latitude=51.17976304645496, longitude=3.83343646255615');
+L.marker([51.16454618821634, 3.8226041068662604]).addTo(map).bindTooltip('name=\'Hullebus\', latitude=51.16454618821634, longitude=3.8226041068662604');
+L.marker([51.156733457061826, 3.8141547661111317]).addTo(map).bindTooltip('name=\'O5b\', latitude=51.156733457061826, longitude=3.8141547661111317');
+L.marker([51.15172913828141, 3.8085859011329712]).addTo(map).bindTooltip('name=\'O5N\', latitude=51.15172913828141, longitude=3.8085859011329712');
+L.marker([51.14936448139748, 3.805936818038926]).addTo(map).bindTooltip('name=\'O5\', latitude=51.14936448139748, longitude=3.805936818038926');
+L.marker([51.14764960898288, 3.8040605214449874]).addTo(map).bindTooltip('name=\'O5Z\', latitude=51.14764960898288, longitude=3.8040605214449874');
+L.marker([51.1395693185892, 3.795536116793272]).addTo(map).bindTooltip('name=\'O6N\', latitude=51.1395693185892, longitude=3.795536116793272');
+L.marker([51.13646420962962, 3.7922369550624238]).addTo(map).bindTooltip('name=\'O6\', latitude=51.13646420962962, longitude=3.7922369550624238');
+L.marker([51.133981175317594, 3.7895939559674425]).addTo(map).bindTooltip('name=\'O6Z\', latitude=51.133981175317594, longitude=3.7895939559674425');
+L.marker([51.12805426052233, 3.78304716720399]).addTo(map).bindTooltip('name=\'O6b-lange mate\', latitude=51.12805426052233, longitude=3.78304716720399');
+L.marker([51.11014727284113, 3.7643122026590095]).addTo(map).bindTooltip('name=\'Esso\', latitude=51.11014727284113, longitude=3.7643122026590095');
+L.marker([51.12535487355156, 3.780069771368534]).addTo(map).bindTooltip('name=\'O6b-desteldonk\', latitude=51.12535487355156, longitude=3.780069771368534');
+L.marker([51.109201419616696, 3.763568763877499]).addTo(map).bindTooltip('name=\'G&V\', latitude=51.109201419616696, longitude=3.763568763877499');
+L.marker([51.122202105134534, 3.77670748536514]).addTo(map).bindTooltip('name=\'07N\', latitude=51.122202105134534, longitude=3.77670748536514');
+L.marker([51.119797294889956, 3.773983383676212]).addTo(map).bindTooltip('name=\'O7\', latitude=51.119797294889956, longitude=3.773983383676212');
+L.marker([51.116554686653224, 3.780749594019985]).addTo(map).bindTooltip('name=\'Bravo4\', latitude=51.116554686653224, longitude=3.780749594019985');
+L.marker([51.11714395519195, 3.7712248396908814]).addTo(map).bindTooltip('name=\'O7Z\', latitude=51.11714395519195, longitude=3.7712248396908814');
+L.marker([51.109254001173554, 3.76269392305805]).addTo(map).bindTooltip('name=\'O7b\', latitude=51.109254001173554, longitude=3.76269392305805');
+L.marker([51.10439645903542, 3.7589027513651025]).addTo(map).bindTooltip('name=\'O8\', latitude=51.10439645903542, longitude=3.7589027513651025');
+L.marker([51.086638855478064, 3.757094923985586]).addTo(map).bindTooltip('name=\'O9\', latitude=51.086638855478064, longitude=3.757094923985586');
+L.marker([51.10697608554758, 3.7231145302651445]).addTo(map).bindTooltip('name=\'bypass-noord\', latitude=51.10697608554758, longitude=3.7231145302651445');
+L.marker([51.104893172643024, 3.720287767166523]).addTo(map).bindTooltip('name=\'W9R\', latitude=51.104893172643024, longitude=3.720287767166523');
+L.marker([51.104658038083215, 3.7215177598408107]).addTo(map).bindTooltip('name=\'bypass\', latitude=51.104658038083215, longitude=3.7215177598408107');
+L.marker([51.1035405505845, 3.7184085905118853]).addTo(map).bindTooltip('name=\'bypass-zuid\', latitude=51.1035405505845, longitude=3.7184085905118853');
+L.marker([51.1016261099858, 3.713683294560318]).addTo(map).bindTooltip('name=\'mcdonalds\', latitude=51.1016261099858, longitude=3.713683294560318');
+L.marker([51.10077130611376, 3.714416587328073]).addTo(map).bindTooltip('name=\'W9-tunnel-noord\', latitude=51.10077130611376, longitude=3.714416587328073');
+L.marker([51.100671420338024, 3.7142828574612805]).addTo(map).bindTooltip('name=\'W9\', latitude=51.100671420338024, longitude=3.7142828574612805');
+L.marker([51.101316003030156, 3.716503080403369]).addTo(map).bindTooltip('name=\'viaductstraat\', latitude=51.101316003030156, longitude=3.716503080403369');
+L.marker([51.10073685884441, 3.7126806263803576]).addTo(map).bindTooltip('name=\'Brico\', latitude=51.10073685884441, longitude=3.7126806263803576');
+L.marker([51.09907674005349, 3.7115854127979957]).addTo(map).bindTooltip('name=\'W9-tunnel-zuid\', latitude=51.09907674005349, longitude=3.7115854127979957');
+L.marker([51.09047474295654, 3.6900964214768264]).addTo(map).bindTooltip('name=\'W11A\', latitude=51.09047474295654, longitude=3.6900964214768264');
+L.marker([51.087625856567875, 3.678839706455968]).addTo(map).bindTooltip('name=\'W11B\', latitude=51.087625856567875, longitude=3.678839706455968');
+L.marker([51.08605540704132, 3.6706669706886825]).addTo(map).bindTooltip('name=\'W11C\', latitude=51.08605540704132, longitude=3.6706669706886825');
+L.marker([51.14309554461762, 3.740089784515061]).addTo(map).bindTooltip('name=\'test\', latitude=51.14309554461762, longitude=3.740089784515061');
+
+                L.polyline([[51.18747713381796, 3.8326519915916344], [51.18683437317017, 3.8351426070858436]], {color: 'blue', weight: 2.5}).addTo(map).bindTooltip('O4 → Walderdonk');
+L.polyline([[51.18747713381796, 3.8326519915916344], [51.17976304645496, 3.83343646255615], [51.16454618821634, 3.8226041068662604], [51.156733457061826, 3.8141547661111317], [51.14936448139748, 3.805936818038926]], {color: 'blue', weight: 10.0}).addTo(map).bindTooltip('O4 → O4b → Hullebus → O5b → O5');
+
+                map.fitBounds([[51.08402697250579, 3.667377457960739], [51.18950556835349, 3.838432119813787]]);
+                </script>
+
+</body>
+</html>
